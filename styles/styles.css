@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*AUTOR: Isac Ryutaro Otsuka*/
+/*CURSO: Formação em HTML e CSS da ALura*/
+/*ANO: 2024/08 */
+
+:root{
+    --1st-color:#2C2C2C;
+    --2nd-color:#F5F5F5;
+    --3rd-color:#C8D65A;
+    --hvr-color:#4A4A49;
+    --fnt-titulo: "Krona One", sans-serif;
+    --fnt-corpo: "Montserrat", sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--1st-color);
+    color: var(--2nd-color);
+}
+.cabecalho, .apresentacao{
+    width: 62%;
+    margin: 0 auto;
+}
+.cabecalho{
+    font-family: var(--fnt-corpo);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.cabecalho__menu{
+    margin: 25px auto 25px;
+    display: flex;
+    align-items: flex-start;
+    gap:80px;
+}
+
+.cabecalho__menu__link{
+    padding: 10px 0;
+    color:  var(--3rd-color);
+}
+
+.cabecalho__menu__link:hover{
+    color: var(--2nd-color);
+}
+
+.apresentacao{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.apresentacao__conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+}
+
+.apresentacao__conteudo__titulo{
+    font-family: var(--fnt-titulo);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.25rem;
+    line-height: 56px;
+}
+
+.destaque{
+    color: var(--3rd-color);
+}
+
+.apresentacao__conteudo__texto{
+    font-family: var(--fnt-corpo);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 36px;
+}
+
+.apresentacao__social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.apresentacao__social__subtitulo{
+    font-family: var(--fnt-titulo);
+    font-weight: 400;
+    font-size: 1.5rem;    
+}
+.apresentacao__social__botao{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border:2px solid  var(--3rd-color);
+    border-radius: 8px;
+    color: var(--2nd-color);
+    font-family: var(--fnt-corpo);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 21px 0;
+    width: 50%;
+}
+
+.apresentacao__social__botao:hover{
+    background: var(--hvr-color);
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.rodape{
+    background: var(--3rd-color);
+    color: var(--1st-color);
+    bottom: 0;
+    height: 80px;
+    padding: 24px;
+    margin-top: 100px;
+}
+
+.rodape__texto{
+    font-family: var(--fnt-corpo);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+.rodape__link{
+    color: var(--1st-color);
+
+}
+.rodape__link:hover{
+    color:  var(--2nd-color);
+}
+
+/*responsividade Telas menores que 1350px*/
+
+@media (max-width:1350px) {
+    .cabecalho, .apresentacao{
+        width: 80%;
+    }
+
+    .cabecalho__menu{
+        display: flex;
+        justify-content: center;
+        gap:10%;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        justify-content: flex-star;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+
+}
+
+@media (max-width:700px){
+
+    .apresentacao__imagem{
+        width: 70%;
+    }
+    .apresentacao__social__botao{
+        width: 100%;
+    }
+    .rodape__texto{
+        font-size: 1rem;
+    }
+}
